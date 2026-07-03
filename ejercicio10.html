@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor Celsius a Fahrenheit</title>
+    
+    <!-- Referencia al CSS externo -->
+    <link rel="stylesheet" href="css/ejercicio10.css" />
+</head>
+<body>
+
+    <div class="converter-card">
+        <h1>
+             Conversor Celsius a Fahrenheit 
+        </h1>
+        
+
+        <!-- Formulario -->
+        <form id="converterForm" novalidate>
+            <div class="input-group">
+                <label for="celsiusInput">Grados Celsius (°C)</label>
+                <input type="text" id="celsiusInput"  class="input-field"   placeholder="Ej: 25"  autofocus/>
+            </div>
+
+            <div class="button-group">
+                <!--<button type="submit" class="btn" id="convertBtn"> Convertir</button>-->
+                <button type="button" onclick="convertirTemperatura()"  class="btn" id="convertBtn">Convertir</button>
+            </div>
+
+            
+        </form>
+
+        <div class="result-section">
+            <div class="result-label">
+                <span> Fahrenheit (°F)</span>
+            </div>
+            <input  type="text" id="fahrenheitResult"  class="input-field"  readonly placeholder="Resultado" value="" />
+        </div>
+
+        
+    </div>
+
+    <script src="js/eje10.js"></script>
+</body>
+</html>
