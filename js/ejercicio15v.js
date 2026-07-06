@@ -1,47 +1,63 @@
+
 let estudiantes = [];
+function agregar() {
+    let nom = document.getElementById("nombre").value;
+    let clc = document.getElementById("calificacion").value;
 
-function validar_entrada(){
-    let nombrev = document.getElementById('nombre').value;
-    let calificacionv = document.getElementById('calificacion').value;
-    const soloNumeros = /^\d+$/.test(calificacionv);
-    if(nombrev==="" || calificacionv==="") {
-        alert("debe ingresar el nombre y la calificacion, para agregarlo");
-    } else if(!soloNumeros ){
-        alert("la claificasion solo deben ser números ");
-    }else{
-        registrarEstudiante(nombrev, calificacionv);
+    if (nom === "" || clc === "" || isNaN(clc)) {
+        alert("Ingrese datos válidos.");
+        return;
     }
-}
 
-
-function listaVacia(){
-    if(estudiantes.length ===0){
-        alert("la lista esta vacia");
-        return true;
+    if (clc < 0 || clc > 100) {
+        alert("La calificación debe estar entre 0 y 100.");
+        return;
     }
-}
 
-/*
-function registrarEstudiante(nombrev, calificacionv){
-    /*
-    let estudiante={
-    nombre: nombrev,
-    calificasion: calificacionv
-    estudiantes.push
-};*//*
-estudiantes.push
-    alert("estudiante registrado");*/
-    /*
-     new estudiante ={
-        nombre: nombrev,
-        calificacion: calificacionv
+    let estudiante = {
+        nombre: nom,
+        calificacion: parseFloat(clc)
     };
 
-    estudiantes.push(NewEstudiante);
-}*/
+    estudiantes.push(estudiante);
 
-function calcular(){
-    if(!listaVacia()){
-        alert("hola");
+    alert("Estudiante agregado.");
+
+    document.getElementById("nom").value = "";
+    document.getElementById("clc").value = "";
+}
+
+function calcular() {
+
+    if(estudiantes.length == 0){
+        alert("No hay estudiantes.");
+        return;
     }
+
+    let suma = estudiantes.reduce(
+        (total, estudiante) => total + estudiante.calificacion,
+        0
+    );
+
+    let promedio = suma / estudiantes.length;
+
+    let maxima = Math.max(
+        ...estudiantes.map(e => e.calificacion)
+    );
+
+    let minima = Math.min(
+        ...estudiantes.map(e => e.calificacion)
+    );
+
+    let mejor = estudiantes.find(
+        e => e.calificacion === maxima
+    );
+
+    let peor = estudiantes.find(
+        e => e.calificacion === minima
+    );
+
+    document.getElementById("cal_promedio").value = promedio.toFixed(2);
+    document.getElementById("nom_calli_alta").value =  mejor.nombre +" :"+mejor.calificacion;
+    document.getElementById("nom_calli_baja").value = peor.nombre +" :"+peor.calificacion;
 }
