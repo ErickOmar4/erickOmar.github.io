@@ -1,7 +1,7 @@
 #ejercicios de programacion web 
 
 portada 
-(capturas/portada_a1.png)
+![](capturas/portada_a1.png)
 
 
 del ejercicio 1 -7 son ejercicios unicamnte de apalicasion html
@@ -10,20 +10,23 @@ ejercicios del 10 al 15 se implementa el html con el css y se añade funcionalid
 
 
 Ejercicio 1 y2 son paginas únicamente con texto 
-(capturas/eje1y2.png)
+![](capturas/eje1y2.png)
 
 Ejercicio 3 enlaces a otras paginas usando href="direccion de la pagina"
 ```
 <p><a href="https://www.google.com" target="_blank"> Google (nueva pestaña)</a></p>
-<p><a href="https://www.facebook.com" target="_self"> Visita a facebook (misma pestaña)</a></p>```
-
-(capturas/eje3.png)
-
-
-Ejercicio 4 y 5 integrar imágenes usando la etiqueta ` <img src="" alt="">`
+<p><a href="https://www.facebook.com" target="_self"> Visita a facebook (misma pestaña)</a></p>
 ```
-<img src="img/viaje.jpg" alt="Foto de un viaje" width="200">```
-(capturas/eje4y5.png)
+![](capturas/eje3.png)
+
+
+Ejercicio 4 y 5 integrar imágenes usando la etiqueta 
+```
+ <img src="" alt="">
+
+<img src="img/viaje.jpg" alt="Foto de un viaje" width="200">
+```
+![](capturas/eje4y5.png)
 
 ejercicio 7
 uso de la etiqueta ul, sirve para crear listas desordenadas o con viñetas en una página web
@@ -38,19 +41,19 @@ uso de la etiqueta ul, sirve para crear listas desordenadas o con viñetas en un
         <li>Tortillas de maíz</li>
     </ul>
 ```
-(capturas/eje7.png)
+![](capturas/eje7.png)
 
 
 ejercicio 8  y 9 integracion de css 
 usa la etiqueta link para hacer referencia a un archivo .css dentro del head del html, esto para darle estilos
  `<link rel="stylesheet" href="css/ejercicio8.css">`
 
- (capturas/eje8y9.png)
+ ![](capturas/eje8y9.png)
 
  ejercico 10- 18 
  implementacion de js usando la estiqueta script referenciar un archivo js desde body  del html
 
 `<script src="js/ejercicio18.js"></script>`
 ejercicios de programacion web 
- (capturas/eje_conJs.png)
+ ![](capturas/eje_conJs.png)
 
